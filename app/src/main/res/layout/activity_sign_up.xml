@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:visibility="invisible">
+
+    <data>
+
+        <variable
+            name="signup"
+            type="com.foo.gagofarm.SignUpActivity" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SignUpActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/gmargetsansbold"
+                android:text="가입하기"
+                android:textColor="@color/main_green"
+                android:textSize="16sp"
+                tools:layout_editor_absoluteX="160dp"
+                tools:layout_editor_absoluteY="14dp">
+
+            </TextView>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <EditText
+            android:id="@+id/signUpEmail"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#EEEEEE"
+            android:ems="10"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:hint="이메일 입력"
+            android:inputType="textEmailAddress"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#9E9E9E"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/signUpPassWord1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_chainStyle="spread" />
+
+        <EditText
+            android:id="@+id/signUpPassWord1"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#EEEEEE"
+            android:ems="10"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:hint="비밀번호 입력"
+            android:inputType="textPassword"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#9E9E9E"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/signUpPassWord2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpEmail" />
+
+        <EditText
+            android:id="@+id/signUpPassWord2"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#EEEEEE"
+            android:ems="10"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:hint="비밀번호 재입력"
+            android:inputType="textPassword"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#9E9E9E"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/signUpPhoneNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPassWord1" />
+
+        <EditText
+            android:id="@+id/signUpPhoneNumber"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:backgroundTint="#EEEEEE"
+            android:ems="10"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:hint="휴대폰번호(숫자만 입력)"
+            android:inputType="phone"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#9E9E9E"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/signUpCertyfyNum"
+            app:layout_constraintEnd_toStartOf="@+id/signUpPhoneNumberCertfyBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPassWord2" />
+
+        <Button
+            android:id="@+id/signUpPhoneNumberCertfyBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/default_btn"
+            android:clickable="false"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:text="인증번호"
+            android:textColor="#D5D5D5"
+            android:textSize="13sp"
+            app:layout_constraintBottom_toBottomOf="@+id/signUpPhoneNumber"
+            app:layout_constraintEnd_toEndOf="@+id/signUpPassWord2"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/signUpPhoneNumber" />
+
+        <Button
+            android:id="@+id/certifyBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:background="@drawable/round_btn_border"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:text="인증확인"
+            android:textColor="@color/main_green"
+            android:textSize="13sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/signUpCertyfyNum"
+            app:layout_constraintEnd_toEndOf="@id/signUpPhoneNumberCertfyBtn"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@+id/signUpCertyfyNum" />
+
+        <EditText
+            android:id="@+id/signUpCertyfyNum"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="117dp"
+            android:backgroundTint="#EEEEEE"
+            android:ems="10"
+            android:fontFamily="@font/notosnanskr_reguler"
+            android:hint="인증번호입력"
+            android:inputType="number"
+            android:paddingLeft="6dp"
+            android:textColor="#000000"
+            android:textColorHint="#9E9E9E"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/signUpBtn"
+            app:layout_constraintEnd_toStartOf="@+id/certifyBtn"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintHorizontal_weight="3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signUpPhoneNumber" />
+
+        <Button
+            android:id="@+id/signUpBtn"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="51dp"
+            android:background="@drawable/default_btn"
+            android:clickable="false"
+            android:fontFamily="@font/gmargetsansmedium"
+            android:text="가입하기"
+            android:textColor="#D5D5D5"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNumber" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
