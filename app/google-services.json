@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "630850227018",
+    "project_id": "gagofarm-5fa79",
+    "storage_bucket": "gagofarm-5fa79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630850227018:android:6b14097a5c510acae54fb3",
+        "android_client_info": {
+          "package_name": "com.foo.gagofarm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630850227018-aca3q1sl6vjge1eb3fcptome1umsab4m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9IJQ8qPOp8D0L44JSo1tYJOJ-HDHYpv4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630850227018-aca3q1sl6vjge1eb3fcptome1umsab4m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
