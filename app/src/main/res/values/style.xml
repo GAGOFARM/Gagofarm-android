@@ -1,0 +1,5 @@
+<resources>
+    <style name="bottom_item">
+        <item name="fontFamily">@font/gmargetsansmedium</item>
+    </style>
+</resources>
