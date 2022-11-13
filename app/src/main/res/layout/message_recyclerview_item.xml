@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circle_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:minWidth="56dp"
+        android:minHeight="56dp"
+        android:src="@drawable/login_logo"
+        app:civ_border_color="#000000"
+        app:civ_border_overlay="true"
+        app:civ_border_width="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/messageTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:text="준익농장"
+        android:textColor="@color/main_green"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/messageContentTextView"
+        app:layout_constraintStart_toEndOf="@+id/circle_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/messageContentTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:text="준익 농장 사실분"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/messageDateTextView"
+        app:layout_constraintStart_toEndOf="@+id/circle_iv"
+        app:layout_constraintTop_toBottomOf="@+id/messageTitleTextView" />
+
+    <TextView
+        android:id="@+id/messageDateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:text="2020.11.11"
+        android:textColor="#969696"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/circle_iv"
+        app:layout_constraintTop_toBottomOf="@+id/messageContentTextView" />
+
+    <TextView
+        android:id="@+id/messageRegionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:text="제주"
+        android:textColor="#969696"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/messageTitleTextView"
+        app:layout_constraintStart_toEndOf="@+id/messageTitleTextView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
