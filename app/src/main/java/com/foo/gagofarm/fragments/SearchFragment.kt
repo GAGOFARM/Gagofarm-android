@@ -2,13 +2,13 @@ package com.foo.gagofarm.fragments
 
 import android.content.Context
 import android.os.Bundle
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.foo.gagofarm.MainActivity
 import com.foo.gagofarm.R
 import com.foo.gagofarm.SearchRecyclerViewAdapter
@@ -53,8 +53,6 @@ class SearchFragment : Fragment() {
 
         binding.searchRecyclerView.adapter = searchRecyclerViewAdapter
         binding.searchRecyclerView.layoutManager = LinearLayoutManager(activity, RecyclerView.VERTICAL, false)
-
-
     }
 
     override fun onDestroyView() {
@@ -63,13 +61,13 @@ class SearchFragment : Fragment() {
     }
 
     private fun makeDummyData(){
-        data.add(SearchViewItem("","title1","1~1","12",12))
-        data.add(SearchViewItem("","title1","1~1","12",12))
-        data.add(SearchViewItem("","title1","1~1","12",12))
-        data.add(SearchViewItem("","title1","1~1","12",12))
-        data.add(SearchViewItem("","title1","1~1","12",12))
-        data.add(SearchViewItem("","title1","1~1","12",12))
-        data.add(SearchViewItem("","title1","1~1","12",12))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","title1","1~1","12",12,false))
 
     }
 

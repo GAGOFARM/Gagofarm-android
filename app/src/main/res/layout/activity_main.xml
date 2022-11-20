@@ -21,11 +21,10 @@
         app:itemTextAppearanceActive="@style/bottom_item"
         app:itemTextAppearanceInactive="@style/bottom_item"
         app:itemTextColor="@drawable/bottom_menu_color"
-        app:labelOrientation="horizontal|vertical"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout"
         app:menu="@menu/bottom_menu" />

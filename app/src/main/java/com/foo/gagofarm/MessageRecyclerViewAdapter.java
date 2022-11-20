@@ -41,6 +41,11 @@ public class MessageRecyclerViewAdapter  extends RecyclerView.Adapter<MessageRec
         return data.size();
     }
 
+    public void setList(ArrayList<MessageViewItem> _data)
+    {
+        data = _data;
+    }
+
     public class ViewHolder extends RecyclerView.ViewHolder {
         private MessageRecyclerviewItemBinding binding;
         public ViewHolder(@NonNull MessageRecyclerviewItemBinding _binding) {
@@ -52,9 +57,8 @@ public class MessageRecyclerViewAdapter  extends RecyclerView.Adapter<MessageRec
             binding.circleIv.setImageDrawable(null /*item.getImage()*/);
             binding.messageTitleTextView.setText(item.getTitle());
             binding.messageContentTextView.setText(item.getContent());
-            binding.messageContentTextView.setText(item.getContent());
             binding.messageDateTextView.setText(item.getDate());
-            binding.messageRegionTextView.setText(item.getRegion());
+            binding.imageView3.setImageResource(R.drawable.underline);
         }
     }
 }

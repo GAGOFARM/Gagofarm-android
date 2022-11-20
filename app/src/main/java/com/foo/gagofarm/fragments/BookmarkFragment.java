@@ -17,11 +17,10 @@ import java.util.ArrayList;
 
 public class BookmarkFragment extends Fragment {
     private SearchRecyclerViewAdapter mAdapter;
-    private ArrayList<SearchViewItem> data;
+    private ArrayList<SearchViewItem> data ;
     private FragmentBookmarkBinding binding;
 
     public BookmarkFragment() {
-        // Required empty public constructor // 137511
     }
     public static BookmarkFragment newInstance(String param1, String param2) {
         BookmarkFragment fragment = new BookmarkFragment();
@@ -40,21 +39,24 @@ public class BookmarkFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         binding = FragmentBookmarkBinding.inflate(inflater,container,false);
-        return inflater.inflate(R.layout.fragment_bookmark, container, false);
+        return binding.getRoot();
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        makeDummyData();
-        binding.bookmarkRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL,false));
+
         mAdapter = new SearchRecyclerViewAdapter(getContext());
+        makeDummyData();
         mAdapter.setList(data);
+
         binding.bookmarkRecyclerView.setAdapter(mAdapter);
+        binding.bookmarkRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL,false));
     }
 
 
     private void makeDummyData(){
+        data =  new ArrayList<>();
         data.add(new SearchViewItem("","title1","1~1","12",12,true));
         data.add(new SearchViewItem("","title1","1~1","12",12,true));
         data.add(new SearchViewItem("","title1","1~1","12",12,true));

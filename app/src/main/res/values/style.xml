@@ -1,5 +1,7 @@
 <resources>
     <style name="bottom_item">
         <item name="fontFamily">@font/gmargetsansmedium</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
     </style>
 </resources>

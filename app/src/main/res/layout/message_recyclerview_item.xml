@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/circle_iv"
@@ -60,15 +61,17 @@
         app:layout_constraintStart_toEndOf="@+id/circle_iv"
         app:layout_constraintTop_toBottomOf="@+id/messageContentTextView" />
 
-    <TextView
-        android:id="@+id/messageRegionTextView"
-        android:layout_width="wrap_content"
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="12dp"
-        android:fontFamily="@font/gmargetsansmedium"
-        android:text="제주"
-        android:textColor="#969696"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/messageTitleTextView"
-        app:layout_constraintStart_toEndOf="@+id/messageTitleTextView" />
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/circle_iv"
+        app:srcCompat="@drawable/underline" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,13 @@
 package com.foo.gagofarm
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat.startActivity
+import androidx.recyclerview.widget.RecyclerView
 import com.foo.gagofarm.data.SearchViewItem
 import com.foo.gagofarm.databinding.SearchRecyclerviewItemBinding
 
@@ -36,17 +38,22 @@ class SearchRecyclerViewAdapter (val context: Context) :
         init{
             binding.farmImageView.setOnClickListener{
                 Toast.makeText(context, "image", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, DetailActivity::class.java)
+                startActivity(context,intent,null)
+
+            }
+            binding.isBookmarked.setOnClickListener{
+                Toast.makeText(context, "bookmark", Toast.LENGTH_SHORT).show()
             }
         }
 
         fun bind(searchViewItem: SearchViewItem) {
-            binding.farmImageView.setImageDrawable(searchViewItem.image)
+            binding.farmImageView.setImageDrawable(null)
             binding.priceTextView.text = searchViewItem.price.toString()
             binding.distanceTextView.text = searchViewItem.distance
             binding.farmTitleTextView.text = searchViewItem.title
             binding.periodTextView.text = searchViewItem.period
-
-
+            binding.isBookmarked.setImageResource(if(searchViewItem.bookmarked ) R.drawable.ic_bookmarked else R.drawable.ic_bookmark)
         }
 
     }

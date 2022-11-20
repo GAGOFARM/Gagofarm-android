@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/ic_search"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="100sp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:minWidth="80dp"
+        android:maxWidth="168dp"
+        android:title="검색"/>
+
+    <item
+        android:id="@+id/bookmark"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/ic_bookmark"
+        android:minWidth="80dp"
+        android:maxWidth="168dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:title="북마크"/>
+
+    <item
+        android:id="@+id/message"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/ic_message"
+        android:minWidth="80dp"
+        android:maxWidth="168dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:title="메세지"/>
+
+
+    <item
+        android:id="@+id/profile"
+        app:showAsAction="always"
+        android:enabled="true"
+        android:icon="@drawable/ic_profile"
+        android:minWidth="80dp"
+        android:maxWidth="168dp"
+        android:fontFamily="@font/gmargetsansmedium"
+        android:title="프로필"/>
+</menu>

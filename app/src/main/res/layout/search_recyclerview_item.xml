@@ -66,4 +66,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/periodTextView"
         app:layout_constraintTop_toBottomOf="@+id/periodTextView" />
+
+    <ImageView
+        android:id="@+id/isBookmarked"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/farmImageView"
+        app:layout_constraintTop_toTopOf="@+id/farmImageView"
+        app:srcCompat="@drawable/ic_bookmark" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,7 +15,8 @@ class LoginActivity : AppCompatActivity(){
         setContentView(R.layout.activity_login)
         var loginBtn : Button = findViewById(R.id.loginButton)
         loginBtn.setOnClickListener{ view ->
-           Toast.makeText(this, "login",Toast.LENGTH_SHORT).show()
+            val intent = Intent(applicationContext, MainActivity::class.java)
+            startActivity(intent)
         }
 
         var signUpBtn : Button = findViewById(R.id.signUpButton)
