@@ -8,31 +8,32 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
-import com.foo.gagofarm.data.MessageViewItem;
-import com.foo.gagofarm.databinding.MessageRecyclerviewItemBinding;
 
-public class MessageRecyclerViewAdapter  extends RecyclerView.Adapter<MessageRecyclerViewAdapter.ViewHolder> {
-    private ArrayList<MessageViewItem> data;
+import com.foo.gagofarm.data.MessageItem;
+import com.foo.gagofarm.databinding.ActivityMessageItemBinding;
+import com.foo.gagofarm.databinding.MessageFragmentRecyclerviewItemBinding;
+
+public class MessageRecyclerViewAdapter extends RecyclerView.Adapter<MessageRecyclerViewAdapter.ViewHolder> {
+    private ArrayList<MessageItem> data;
     private Context mContext;
 
-
-    public MessageRecyclerViewAdapter(Context context) {
+    public MessageRecyclerViewAdapter(Context context){
         this.mContext = context;
     }
-
-    public void setData(ArrayList<MessageViewItem> _data) {
+    public void setData(ArrayList<MessageItem> _data){
         this.data = _data;
     }
+
     @NonNull
     @Override
-    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        MessageRecyclerviewItemBinding binding = MessageRecyclerviewItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
-        return new ViewHolder(binding);
+    public MessageRecyclerViewAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        ActivityMessageItemBinding binding = ActivityMessageItemBinding.inflate(LayoutInflater.from(parent.getContext()),parent,false);
+        return new MessageRecyclerViewAdapter.ViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        MessageViewItem item = data.get(position);
+    public void onBindViewHolder(@NonNull MessageRecyclerViewAdapter.ViewHolder holder, int position) {
+        MessageItem item = data.get(position);
         holder.bind(item);
     }
 
@@ -41,25 +42,30 @@ public class MessageRecyclerViewAdapter  extends RecyclerView.Adapter<MessageRec
         return data.size();
     }
 
-    public void setList(ArrayList<MessageViewItem> _data)
-    {
-        data = _data;
-    }
-
     public class ViewHolder extends RecyclerView.ViewHolder {
-        private MessageRecyclerviewItemBinding binding;
-        public ViewHolder(@NonNull MessageRecyclerviewItemBinding _binding) {
+        private ActivityMessageItemBinding binding;
+        public ViewHolder(@NonNull ActivityMessageItemBinding _binding) {
             super(_binding.getRoot());
             binding = _binding;
         }
 
-        public void bind(MessageViewItem item) {
-            binding.circleIv.setImageDrawable(null /*item.getImage()*/);
-            binding.messageTitleTextView.setText(item.getTitle());
-            binding.messageContentTextView.setText(item.getContent());
-            binding.messageDateTextView.setText(item.getDate());
-            binding.imageView3.setImageResource(R.drawable.underline);
+        public void bind(MessageItem item) {
+            if (item.isSender()) {
+                binding.profileImage.setVisibility(View.VISIBLE);
+                binding.senderTitle.setVisibility(View.VISIBLE);
+
+                binding.profileImage.setImageResource(R.drawable.imageIcon);
+                binding.senderTitle.setText(item.getTitle());
+                binding.MessageContent.setText(item.getContent());
+                binding.messageTime.setText(item.getTime());
+            } else {
+                binding.profileImage.setVisibility(View.GONE);
+                binding.senderTitle.setVisibility(View.GONE);
+
+                binding.MessageContent.setText(item.getContent());
+                binding.messageTime.setText(item.getTime());
+
+            }
         }
     }
 }
-

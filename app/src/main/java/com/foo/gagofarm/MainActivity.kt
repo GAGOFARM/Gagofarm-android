@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import com.foo.gagofarm.databinding.ActivityMainBinding
 import com.foo.gagofarm.fragments.BookmarkFragment
 import com.foo.gagofarm.fragments.MessageFragment
+import com.foo.gagofarm.fragments.ProfileFragment
 import com.foo.gagofarm.fragments.SearchFragment
 
 class MainActivity : AppCompatActivity(){
@@ -26,11 +27,14 @@ class MainActivity : AppCompatActivity(){
         val searchFragment = SearchFragment()
         val bookmarkFragment = BookmarkFragment()
         val messageFragment = MessageFragment()
+        val profileFragment = ProfileFragment()
+
         binding.bottomNavigationView.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.search->replaceFragment(searchFragment)
                 R.id.bookmark->replaceFragment(bookmarkFragment)
                 R.id.message->replaceFragment(messageFragment)
+                R.id.profile->replaceFragment(profileFragment)
             }
             true
         }

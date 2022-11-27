@@ -1,5 +1,6 @@
 package com.foo.gagofarm
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -35,7 +36,7 @@ class SignUpActivity : AppCompatActivity() {
             }
 
             override fun onVerificationCompleted(phoneAuthCredential: PhoneAuthCredential) {
-                Toast.makeText(mContext, "이미 가입된 번호입니다.", Toast.LENGTH_SHORT).show()
+               // Toast.makeText(mContext, "이미 가입된 번호입니다.", Toast.LENGTH_SHORT).show()
             }
 
             override fun onVerificationFailed(e: FirebaseException) {
@@ -113,6 +114,10 @@ class SignUpActivity : AppCompatActivity() {
 
             binding.certifyBtn.setOnClickListener {
                 signInWithPhoneVerifyCode(binding.signUpCertyfyNum.text.toString())
+            }
+            binding.signUpBtn.setOnClickListener{
+                val intent = Intent(applicationContext, LoginActivity::class.java)
+                startActivity(intent)
             }
         }
     private fun setActionBar() {

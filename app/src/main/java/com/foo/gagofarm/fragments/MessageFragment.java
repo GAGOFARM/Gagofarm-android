@@ -10,19 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.foo.gagofarm.MessageRecyclerViewAdapter;
-import com.foo.gagofarm.R;
-import com.foo.gagofarm.SearchRecyclerViewAdapter;
-import com.foo.gagofarm.data.MessageViewItem;
-import com.foo.gagofarm.data.SearchViewItem;
-import com.foo.gagofarm.databinding.FragmentBookmarkBinding;
+import com.foo.gagofarm.MessageFragmentRecyclerViewAdapter;
+import com.foo.gagofarm.data.MessageFragmentItem;
 import com.foo.gagofarm.databinding.FragmentMessageBinding;
 
 import java.util.ArrayList;
 
 public class MessageFragment extends Fragment {
-    private MessageRecyclerViewAdapter mAdapter;
-    private ArrayList<MessageViewItem> data;
+    private MessageFragmentRecyclerViewAdapter mAdapter;
+    private ArrayList<MessageFragmentItem> data;
     private FragmentMessageBinding binding;
 
     public MessageFragment() {
@@ -51,7 +47,7 @@ public class MessageFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mAdapter = new MessageRecyclerViewAdapter(getContext());
+        mAdapter = new MessageFragmentRecyclerViewAdapter(getContext());
         makeDummyData();
         mAdapter.setList(data);
 
@@ -60,13 +56,13 @@ public class MessageFragment extends Fragment {
     }
     private void makeDummyData(){
         data =  new ArrayList<>();
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
-        data.add(new MessageViewItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
+        data.add(new MessageFragmentItem("","준익 농장 ","싸고 좋음","2022-11-11"));
 
 
     }

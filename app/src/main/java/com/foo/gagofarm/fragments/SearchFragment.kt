@@ -61,7 +61,7 @@ class SearchFragment : Fragment() {
     }
 
     private fun makeDummyData(){
-        data.add(SearchViewItem("","title1","1~1","12",12,false))
+        data.add(SearchViewItem("","준익농장","2022-11-11~2022-12-11","1",10000,false))
         data.add(SearchViewItem("","title1","1~1","12",12,false))
         data.add(SearchViewItem("","title1","1~1","12",12,false))
         data.add(SearchViewItem("","title1","1~1","12",12,false))
